@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Mulish", sans-serif;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+body {
+      background: #E5E5E5;
+}
+
+/* HEADER DU PANIER */
+
+header {
+    background: white;
+    width: 100%;
+    height: 15vh;
+    border-bottom: 1px solid black;
+}
+
+header h1 {
+    margin-left: 45px;
+    font-weight: 600;
+    font-size: clamp(1rem, 3vw, 48px);
+}
+
+header h2 {
+    font-weight: 700;
+    font-size: 36px;
+    color: #83B293;
+}
+
+header a {
+    color: black;
+    font-size: 24px;
+    margin-right: 50px;
+}
+
+/* SECTION 1 - ZONE LIVRAISON */
+
+.sec1 {
+    height: 60vh;
+    margin: 40px;
+}
+
+.sec1 .liv-box {
+    position: relative;
+    background: white;
+    height: 30vh;
+}
+
+.sec1 .livraison, .livraison-rapide {
+    position: absolute;
+    height: 50%;
+    min-width: 100%;
+}
+.sec1 .liv-box .livraison {
+    top: 0;
+    border-bottom: 1px solid #C4C4C4;
+}
+
+.sec1 .liv-box .livraison-rapide {
+    bottom: 0;
+}
+
+.sec1 input {
+    height: 30px;
+    width: 80px;
+}
+
+.sec1 label {
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+}
+
+.sec1 p {
+    font-weight: bold;
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.resume {
+    background: white;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.commande {
+    background: white;
+}
+.grid {
+    display: grid;
+    grid-template: 0.6fr 1fr / 1fr 1fr;
+    grid-gap: 40px;
+}
+
+.grid .commande{
+    grid-row: span 2;
+}
+
+h3 {
+    align-self: center;
+    font-weight: 700;
+    font-size: 34px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.desc {
+    flex-direction: row;
+    margin-left: 35px;
+    margin-bottom: 20px;
+}
+
+.desc-p {
+    margin-left: 20px;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+}
+
+.desc-p .prix {
+    font-weight: 700;
+    font-size: 48px;
+    color: #D51818;
+}
+
+.desc-p .quant {
+    font-size: 32px;
+}
+
+.commande button {
+    justify-self: center;
+    height: 118px;
+    width: 547px;
+    background: black;
+    color: white;
+    font-weight: 700;
+    font-size: 64px;
+    border-style: none;
+    cursor: pointer;
+    outline-style: none;
+}
+
+.button {
+    margin-top: 60px;
+    width: 100%;
+    justify-content: center;
+}
+
+.moyen-paie {
+    margin-top: 50px;
+}
+
+.sec2 h2 {
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 48px;
+    text-align: center;
+    color: #000000;
+    margin-top: 180px;
+    margin-bottom: 70px;
+}
+
+.cat {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.desc-v {
+    position: relative;
+    padding: 5px;
+    margin-top: 25px;
+    width: 306px;
+    height: 200px;
+    background: white;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+.desc-v p {
+    position: absolute;
+}
+
+.desc-v .rouge {
+    bottom: 0;
+    color: #D51818;
+    font-weight: 700;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1200px) {
+    .sec1 {
+        height: 100vh;
+    }
+    .grid {
+        grid-template: 1fr / 1fr;
+    }
+    .commande {
+        order: 1;
+    }
+}
+
+@media (max-width: 780px) {
+    header h2 {
+        font-size: 24px;
+    }
+    header a {
+        font-size: 16px;
+    }
+    .sec1 label {
+        font-weight: bold;
+        font-size: 16px;
+        text-align: center;
+    }
+    .sec1 {
+        margin: 0;
+    }
+    .sec1 p {
+        font-weight: bold;
+        font-size: 16px;
+        margin-right: 10px;
+    }
+    h3 {
+        font-size: 28px;
+    }
+    .button button {
+        height: 60px;
+        width: 250px;
+        font-size: 32px;
+    }
+    .liv-box {
+        height: 150px;
+    }
+    .commande, .liv-box, .resume {
+        max-width: 100%;
+    }
+    .moyen-paie {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .sec2 {
+        margin-top: 500px;
+    }
+    .sec2 h2 {
+        font-size: 32px;
+    }
+    .resume h3 {
+        margin-bottom: 20px;
+    }
+    .desc-p .prix {
+        font-weight: 700;
+        font-size: 32px;
+        color: #D51818;
+    }
+    .desc-p .quant {
+        font-size: 20px;
+    }
+}
+@media (max-width: 580px) {
+    header {
+        flex-wrap: wrap;
+    }
+    .sec2 {
+        margin-top: 700px;
+    }
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="panier-style.css">
+    <script src="https://kit.fontawesome.com/a485fb38dc.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>ESPACE VETEMENTS - PANIER</title>
+</head>
+<body>
+
+    <!-- HEADER DE LA PAGE -->
+
+    <header class="flex">
+        <h1>ESPACE VÊTEMENTS</h1>
+        <div class="flex">
+            <h2>PAIMENT SECURISE</h2>
+        </div>
+        <a href="index.html">Retour vers le site <i class="fas fa-arrow-right"></i></a>
+    </header>
+
+    <!-- PREMIERE SECTION DE LA PAGE -->
+
+    <section class="sec1 grid">
+        <div class="flex liv-box">
+            <div class="livraison flex">
+                <input type="checkbox" name="livraison-standard" id="livraison-standard">
+                <label for="livraison-standard">Livraison Standard, livraison sous 4 à 5 jours.</label>
+                <p>4,99€</p>
+            </div>
+            <div class="livraison-rapide flex">
+                <input type="checkbox" name="livraison-standard" id="livraison-standard">
+                <label for="livraison-standard">Livraison Express, livraison sous 2 jours.</label>
+                <p>9,99€</p>
+            </div>
+        </div>
+        <div class="commande">
+            <h3>RESUME DE LA COMMANDE</h3>
+            <div class="total flex">
+                <p>Total</p>
+                <p>19,99€</p>
+            </div>
+            <div class="button flex">
+                <button>PAYER</button>
+            </div>
+            <h3>CHOISIR LE MOYEN DE PAIEMENT</h3>
+            <div class="flex moyen-paie">
+                <input type="checkbox" name="cb" id="cb">
+                <label for="cb"><img src="Carte-bleue.jpg" alt="Logo carte bleue"></label>
+                <input type="checkbox" name="visa" id="visa">
+                <label for="visa"><img src="Visa.jpg" alt="Logo visa"></label>
+                <input type="checkbox" name="paypal" id="paypal">
+                <label for="paypal"><img src="Paypal.jpg" alt="Logo Paypal"></label>
+                <input type="checkbox" name="Mastercard" id="Mastercard">
+                <label for="Mastercard"><img src="Mastercard.jpg" alt="Logo Mastercard"></label>
+            </div>
+        </div>
+        <div class="resume flex">
+            <h3>RESUME DE L'ARTICLE</h3>
+            <div class="desc flex">
+                <img src="Panier-vet.jpg" alt="Vêtement selectionné">
+                <div class="desc-p flex">
+                    <p class="nom">Polo Marron et Blanc</p>
+                    <p class="prix">19,99€</p>
+                    <p class="quant">Quantité : 1</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sec2">
+        <h2>VOUS AIMEREZ AUSSI</h2>
+        <div class="cat flex">
+            <div class="img">
+              <img src="Hummel.jpg" alt="Tee-Shirt homme">
+              <div class="desc-v">
+                  <p>Tee-Shirt Blanc HUMMEL</p>
+                  <p class="rouge">à partir de 23,95€</p>
+              </div>
+            </div>
+            <div class="img">
+              <img src="Adidas.jpg" alt="Ensemble Adidas">
+              <div class="desc-v">
+                <p>adidas Originals STRIPES TEE</p>
+                <p class="rouge">à partir de 25,95€</p>
+            </div>
+            </div>
+            <div class="img">
+              <img src="Ensemble-noir.jpg" alt="Ensemble noir">
+              <div class="desc-v">
+                <p>Ensemble de sport</p>
+                <p class="rouge">à partir de 42,95€</p>
+            </div>
+            </div>
+            <div class="img">
+              <img src="Ensemble-v.jpg" alt="Veste survetement violette">
+              <div class="desc-v">
+                <p>Veste de survêtement - Black / Violet / White Unisexe</p>
+                <p class="rouge">à partir de 30,95€</p>
+            </div>
+            </div>
+    </section>
+</body>
+</html>

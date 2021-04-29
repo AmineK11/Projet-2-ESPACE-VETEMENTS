@@ -1,0 +1,697 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Mulish", sans-serif;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h2 {
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 48px;
+  text-align: center;
+  color: #000000;
+  margin-top: 180px;
+  margin-bottom: 70px;
+}
+
+/* MENU BURGER INTERFACE UI*/
+
+.menu_burger {
+  background-color: #c4c4c4;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 999;
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(100%);
+}
+.menu_burger.isOpen {
+  transform: translateX(0%);
+}
+.menu_burger #recherche {
+  margin-top: 30px;
+  height: 70px;
+  min-width: 80%;
+  border-style: 1px solid black;
+  outline-style: none;
+}
+.menu_burger #recherche::-webkit-search-cancel-button {
+  display: none;
+}
+.menu_burger input {
+    padding-left: 18px;
+    font-size: 24px;
+  }
+.menu_burger .list {
+  flex-direction: column;
+}
+.menu_burger .list a {
+  margin-top: 50px;
+}
+.menu_burger .panier-burger {
+  text-align: center;
+  background-color: white;
+  text-align: center;
+  color: black;
+  font-size: 30px;
+  border: 2px solid black;
+  padding: 20px;
+}
+.menu_burger .titre-burger {
+  margin-top: 50px;
+  text-align: center;
+}
+.titre-burger img {
+  position: absolute;
+}
+.titre-burger h1 {
+  position: relative;
+  top: 20px;
+  font-size: clamp(20px, 3em, 50px);
+  margin-bottom: 30px;
+  color: white;
+}
+.titre-burger p {
+  position: relative;
+  color: white;
+  font-size: 25px;
+  font-style: italic;
+  padding-top: 20px;
+}
+
+/* SCROLL APPARITION */
+
+.reveal {
+    opacity: 0;
+    transform: translateX(-90%);
+}
+.reveal-visible {
+    opacity: 1;
+    transform: translateX(0);
+    transition: 0.8s cubic-bezier(.59,.05,.34,1.03);
+}
+
+/* SECTION 1 - CSS */
+
+header {
+  position: relative;
+  height: 90vh;
+}
+
+nav {
+  margin-top: 45px;
+  width: 100%;
+}
+
+nav #recherche {
+  height: 70px;
+  min-width: 550px;
+  border-style: 1px solid black;
+  outline-style: none;
+}
+
+nav #recherche:hover {
+  border: 1px solid black;
+}
+
+nav #recherche::-webkit-search-cancel-button {
+  display: none;
+}
+
+header input {
+  padding-left: 18px;
+  font-size: 24px;
+}
+
+nav .search {
+  height: 70px;
+  width: 85px;
+  border-style: none;
+  background-color: black;
+  color: white;
+  outline-style: none;
+}
+
+nav .search:hover {
+  cursor: pointer;
+}
+
+nav .panier {
+  height: 90px;
+  width: 100px;
+  background-color: white;
+  border-style: none;
+  outline-style: none;
+}
+
+nav .panier:hover {
+  cursor: pointer;
+}
+
+nav .fas {
+  font-size: 50px;
+}
+
+.titre-mobile {
+  display: none;
+}
+
+/* MENU BURGER */
+
+.burger {
+  width: 42px;
+  height: 24px;
+  z-index: 99999;
+  cursor: pointer;
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  display: none;
+}
+
+.burger span {
+  background-color: black;
+  width: 100%;
+  height: 4px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background-color 0.5s ease-in-out;
+}
+.burger span::before,
+.burger span::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: black;
+  transition: transform 0.5s ease-in-out;
+}
+
+.burger span::before {
+  transform: translateY(-10px);
+}
+
+.burger span::after {
+  transform: translateY(10px);
+}
+
+.burger.isOpen span {
+  background-color: transparent;
+}
+.burger.isOpen span::before {
+  transform: translateY(0px) rotateZ(45deg);
+}
+.burger.isOpen span::after {
+  transform: translateY(0px) rotateZ(-45deg);
+}
+
+/* FIN MENU BURGER */
+
+.acceuil {
+  position: relative;
+  height: 430px;
+  margin-top: 180px;
+}
+
+.acceuil img {
+  position: absolute;
+  right: 0;
+  width: min(940px, 60%);
+}
+
+.titre {
+  position: absolute;
+  z-index: 1;
+  left: 15%;
+}
+.acceuil h1 {
+  font-weight: normal;
+  font-size: clamp(72px, 60px, 32px);
+}
+
+.acceuil h1 span {
+  font-size: clamp(144px, 96px, 64px);
+}
+
+.acceuil h1 span .ments {
+  font-size: 144px;
+  color: white;
+}
+
+.acceuil p {
+  font-size: 34px;
+}
+
+.acceuil .p2 {
+  display: none;
+}
+
+.list a {
+  margin-top: 130px;
+  font-family: Mulish;
+  font-size: 30px;
+  font-weight: 800;
+  color: black;
+}
+
+/* FIN SECTION 1 - CSS */
+
+/* SECTION 2 - CSS */
+
+.sec2 {
+  position: relative;
+  margin-top: 200px;
+  flex-direction: column;
+}
+
+.sec2 .destock img {
+  max-width: 100%;
+}
+
+.sec2 .destock p {
+  position: absolute;
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  font-size: 144px;
+  color: white;
+}
+
+.sec2 .destock p span {
+  color: #d41818;
+  font-weight: 800;
+}
+
+.sec2 .destock .des {
+  top: 0;
+  margin-top: 10px;
+}
+
+.sec2 .destock .jusq {
+  bottom: 0;
+  margin-bottom: 60px;
+}
+
+.pubs {
+  background: #c4c4c4;
+  height: 202px;
+  text-align: center;
+}
+
+.barre {
+  width: 100px;
+  height: 0px;
+  border: 3px solid #000000;
+  transform: rotate(90deg);
+}
+
+.pubs p {
+  font-size: 34px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+}
+
+.pubs span {
+  font-size: 34px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  color: #d41818;
+}
+
+/* FIN SECTION 2 - CSS */
+
+/* SECTION 3 - 4 - 5 - CSS */
+
+.cat {
+  justify-content: space-between;
+  width: auto;
+  height: auto;
+  background: #c4c4c4;
+}
+
+.cat .img {
+  position: relative;
+  margin-left: 20px;
+}
+
+.cat .img p {
+  align-items: center;
+  justify-content: center;
+  background: rgba(212, 215, 219, 0.85);
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  padding: 30px;
+  width: 100%;
+  font-size: 30px;
+}
+
+.fleche {
+  font-family: "Oswald", sans-serif;
+  font-size: 48px;
+  padding-bottom: 14px;
+  margin: 0 15px;
+  background: white;
+  text-align: center;
+  border: 3px solid black;
+  border-radius: 100%;
+  height: 64px;
+  width: 64px;
+}
+
+.pub {
+  position: relative;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 70px;
+  background: #ffcdcc;
+}
+
+.pub-m {
+  background: #fff8e8;
+}
+
+.mode-m button {
+  background: #d79f6e;
+}
+
+.mode {
+  position: absolute;
+  right: 18%;
+  margin-top: 70px;
+  text-align: center;
+  font-family: Oswald;
+  font-style: normal;
+  width: 35%;
+  font-weight: 700;
+  font-size: 50px;
+}
+
+.mode button {
+  width: 250px;
+  height: 80px;
+  background: #ffe4cc;
+  font-size: 24px;
+  font-weight: 700;
+  border-style: none;
+  margin-top: 110px;
+}
+
+.mode button:hover {
+  cursor: pointer;
+  outline-style: none;
+}
+
+/* FIN SECTION 3 - CSS */
+
+/* SECTION 5 - CSS */
+
+.sec5 {
+  margin-bottom: 105px;
+}
+
+/* FIN SECTION 5 - CSS */
+
+/* SECTION 6 - CSS */
+
+.sec6 {
+  background-color: #c4c4c4;
+  justify-content: space-between;
+}
+
+.sec6 .logos {
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  gap: 30px;
+  height: 300px;
+}
+
+.sec6 .l1 {
+  margin-left: 50px;
+}
+
+.sec6 .l3 {
+  margin-right: 50px;
+}
+
+.paie {
+  gap: 60px;
+}
+
+.paie2 {
+  gap: 160px;
+}
+
+.fa-lock {
+  font-size: 70px;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 1800px) {
+  .acceuil img {
+    width: 1270px;
+  }
+}
+
+@media (max-width: 1310px) {
+  /* SECTION 1 */
+
+  .acceuil img {
+    width: 100%;
+  }
+  .titre {
+    left: auto;
+  }
+  .acceuil h1 {
+    font-weight: normal;
+    font-size: 122px;
+    text-align: center;
+    color: white;
+  }
+
+  .acceuil h1 span {
+    font-size: 122px;
+  }
+
+  .acceuil h1 span .ments {
+    font-size: 122px;
+    color: white;
+  }
+  .acceuil p {
+    font-size: 30px;
+    color: white;
+    font-style: italic;
+    text-align: center;
+    display: none;
+  }
+  .acceuil .p2 {
+    display: block;
+  }
+
+  /* SECTION 2 */
+
+  .sec2 .destock p {
+    font-size: 100px;
+  }
+  .pubs {
+    height: 120px;
+  }
+  .barre {
+    width: 80px;
+  }
+  .pubs p {
+    font-size: 24px;
+  }
+  .pubs span {
+    font-size: 24px;
+  }
+
+  /* SECTION 3 - 4 - 5 */
+  .fleche {
+    display: none;
+  }
+  .cat {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 50px;
+  }
+  .cat img {
+    width: 70%;
+  }
+  .cat .img p {
+    width: 70%;
+    height: 60px;
+    text-align: center;
+    font-size: 25px;
+    padding: 15px;
+    text-transform: uppercase;
+  }
+  .pub {
+    width: 100%;
+    height: 30vh;
+  }
+  .pub img {
+    display: none;
+  }
+  .mode {
+    width: 100%;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    margin-top: 0;
+  }
+  .mode p {
+    font-size: 45px;
+  }
+  .mode button {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 900px) {
+  /* SECTION 1 */
+
+  header {
+    height: auto;
+  }
+  header .list {
+    display: none;
+  }
+  .titre-mobile {
+    display: block;
+  }
+  .burger {
+    display: block;
+  }
+  nav {
+    width: 100%;
+    height: 50px;
+    flex-direction: row;
+    align-items: center;
+  }
+  nav .logo {
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    width: 120px;
+  }
+  nav #recherche {
+    display: none;
+  }
+  nav .search {
+    display: none;
+  }
+  nav .panier {
+    display: none;
+  }
+  .acceuil {
+    display: none;
+  }
+
+  /* SECTION 2 */
+
+  .sec2 .destock p {
+    font-size: 10vw;
+  }
+
+  /* SECTION 2 - 3 - 4 - 5 */
+
+  .sec2,
+  .sec3,
+  .sec4,
+  h2 {
+    margin-top: 60px;
+  }
+
+  /* SECTION 6 */
+
+  .sec6 {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .sec6 .paie {
+    width: 100%;
+  }
+  .sec6 .paie img {
+    width: 50px;
+  }
+  .sec6 .l2 i {
+    font-size: 50px;
+  }
+  .sec6 .l2 img {
+    width: 60px;
+  }
+  .sec6 .l3 img {
+    width: 45px;
+  }
+}
+
+@media (max-width: 750px) {
+  h2 {
+    font-size: 32px;
+  }
+
+  /* SECTION 1 */
+
+  nav a img {
+    width: 100px;
+  }
+
+  /* SECTION 2 */
+
+  .sec2 .destock p {
+    font-size: 10vw;
+  }
+  .sec2 .destock .jusq {
+    margin-bottom: 30px;
+  }
+  .pubs .barre {
+    width: 60px;
+    border: 2px solid black;
+  }
+  .pubs p {
+    font-size: 3vw;
+    padding: 10px;
+  }
+  .pubs p span {
+    font-size: 3vw;
+  }
+
+  /* SECTION 3 - 4 - 5 */
+
+  .mode p {
+    font-size: 30px;
+    padding: 10px;
+  }
+  .mode button {
+    margin-top: 30px;
+    font-size: 18px;
+    width: 175px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 550px) {
+  header .logo {
+    display: none;
+  }
+}
