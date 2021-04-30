@@ -162,6 +162,10 @@ h3 {
     margin-top: 50px;
 }
 
+.sec2 {
+    margin-top: 300px;
+}
+
 .sec2 h2 {
     font-family: Mulish;
     font-style: normal;
@@ -255,7 +259,7 @@ h3 {
         gap: 20px;
     }
     .sec2 {
-        margin-top: 500px;
+        margin-top: 800px;
     }
     .sec2 h2 {
         font-size: 32px;
