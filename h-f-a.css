@@ -87,7 +87,7 @@ img {
 
 header {
   position: relative;
-  height: 90vh;
+  height: 30vh;
 }
 
 nav {
@@ -208,10 +208,60 @@ nav .fas {
 
 /* FIN MENU BURGER */
 
+/* CATEGORIES / CHOIX */
+.sec3 {
+  position: relative;
+  border: 1px solid #64707b;
+  background-color: #e5e5e5;
+  height: 10vh;
+  width: 100%;
+  margin-top: 30px;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+.sec3 p {
+  font-size: clamp(16px, 2vw, 24px);
+  font-weight: 800;
+}
+.barre-c {
+  width: 60px;
+  height: 0px;
+  border: 3px solid #64707b;
+  transform: rotate(90deg);
+}
+.cate {
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+.cate span {
+  background-color: black;
+  width: 100%;
+  height: 4px;
+  display: block;
+}
+.cate span::before,
+.cate span::after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: black;
+}
+.cate span::before {
+  transform: translateY(20px);
+  display: block;
+}
+
+.cate span::after {
+  transform: translateY(6px);
+  display: block;
+}
 /* PREMIERE ET DEUXIEME LIGNE */
 
-.sec4, .sec6 {
-    margin-top: 45px;
+.sec4,
+.sec6 {
+  margin-top: 45px;
 }
 
 .cat {
@@ -241,6 +291,13 @@ nav .fas {
   bottom: 0;
   color: #d51818;
   font-weight: 700;
+}
+
+/* LOGO + IMAGE */
+
+.sec2 {
+  justify-content: center;
+  width: 100%;
 }
 
 /* PUBS / PROMOS */
@@ -417,6 +474,7 @@ nav .fas {
 
   header {
     height: auto;
+    margin-bottom: 50px;
   }
   header .list {
     display: none;
@@ -465,7 +523,7 @@ nav .fas {
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 751px) {
   .pubs .barre {
     width: 60px;
     border: 2px solid black;
@@ -477,7 +535,17 @@ nav .fas {
   .pubs p span {
     font-size: 3vw;
   }
+  .sec3 {
+    flex-wrap: wrap;
+  }
+  .sec3 p {
+    font-size: 12px;
+  }
+  .barre-c {
+    display: none;
+  }
 }
+
 
 @media (max-width: 550px) {
   header .logo {
